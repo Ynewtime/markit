@@ -67,7 +67,7 @@
             <a id="nextFileLink" class="nav" href="z_37275977e78ab625___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.15.4">coverage.py v7.15.4</a>,
-            created at 2026-09-09 16:27 +0000
+            created at 2026-09-10 09:04 +0000
         </p>
         <aside class="hidden">
             <button type="button" class="button_next_chunk" data-shortcut="j"></button>
@@ -117,7 +117,7 @@
     <p class="run"><span class="n"><a id="t33" href="#t33">33</a></span><span class="t"><span class="key">from</span> <span class="nam">markitai</span><span class="op">.</span><span class="nam">runs</span><span class="op">.</span><span class="nam">report</span> <span class="key">import</span> <span class="nam">build_llm_usage_block</span><span class="op">,</span> <span class="nam">build_report_shell</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t34" href="#t34">34</a></span><span class="t"><span class="key">from</span> <span class="nam">markitai</span><span class="op">.</span><span class="nam">security</span> <span class="key">import</span> <span class="nam">atomic_write_json</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t35" href="#t35">35</a></span><span class="t"><span class="key">from</span> <span class="nam">markitai</span><span class="op">.</span><span class="nam">utils</span> <span class="key">import</span> <span class="nam">term</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t"><span class="key">from</span> <span class="nam">markitai</span><span class="op">.</span><span class="nam">utils</span><span class="op">.</span><span class="nam">term</span> <span class="key">import</span> <span class="nam">get_console</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t36" href="#t36">36</a></span><span class="t"><span class="key">from</span> <span class="nam">markitai</span><span class="op">.</span><span class="nam">utils</span><span class="op">.</span><span class="nam">term</span> <span class="key">import</span> <span class="nam">get_stderr_console</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t37" href="#t37">37</a></span><span class="t"><span class="key">from</span> <span class="nam">markitai</span><span class="op">.</span><span class="nam">utils</span><span class="op">.</span><span class="nam">text</span> <span class="key">import</span> <span class="nam">format_error_message</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t38" href="#t38">38</a></span><span class="t">&nbsp;</span><span class="r"></span></p>
     <p class="exc show_exc"><span class="n"><a id="t39" href="#t39">39</a></span><span class="t"><span class="key">if</span> <span class="nam">TYPE_CHECKING</span><span class="op">:</span>&nbsp;</span><span class="r"></span></p>
@@ -595,7 +595,7 @@
     <p class="run"><span class="n"><a id="t511" href="#t511">511</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">state_file</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_get_state_file_path</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t512" href="#t512">512</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">report_file</span> <span class="op">=</span> <span class="nam">self</span><span class="op">.</span><span class="nam">_get_report_file_path</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t513" href="#t513">513</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">state</span><span class="op">:</span> <span class="nam">BatchState</span> <span class="op">|</span> <span class="key">None</span> <span class="op">=</span> <span class="key">None</span>&nbsp;</span><span class="r"></span></p>
-    <p class="run"><span class="n"><a id="t514" href="#t514">514</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">console</span> <span class="op">=</span> <span class="nam">get_console</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
+    <p class="run"><span class="n"><a id="t514" href="#t514">514</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">console</span> <span class="op">=</span> <span class="nam">get_stderr_console</span><span class="op">(</span><span class="op">)</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t515" href="#t515">515</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">_console_log_restorer</span> <span class="op">=</span> <span class="nam">console_log_restorer</span>&nbsp;</span><span class="r"></span></p>
     <p class="pln"><span class="n"><a id="t516" href="#t516">516</a></span><span class="t">        <span class="com"># Collect image analysis results for JSON aggregation</span>&nbsp;</span><span class="r"></span></p>
     <p class="run"><span class="n"><a id="t517" href="#t517">517</a></span><span class="t">        <span class="nam">self</span><span class="op">.</span><span class="nam">image_analysis_results</span><span class="op">:</span> <span class="nam">list</span><span class="op">[</span><span class="nam">ImageAnalysisResult</span><span class="op">]</span> <span class="op">=</span> <span class="op">[</span><span class="op">]</span>&nbsp;</span><span class="r"></span></p>
@@ -1750,7 +1750,7 @@
             <a class="nav" href="z_37275977e78ab625___init___py.html">&#xbb; next</a>
             &nbsp; &nbsp; &nbsp;
             <a class="nav" href="https://coverage.readthedocs.io/en/7.15.4">coverage.py v7.15.4</a>,
-            created at 2026-09-09 16:27 +0000
+            created at 2026-09-10 09:04 +0000
         </p>
     </div>
 </footer>
